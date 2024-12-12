@@ -2,18 +2,19 @@ html {border: 0; padding: 0; margin: 0; color: rgb(156, 183, 241); background-co
 body, h1 {margin: 0}
 p {text-shadow:1px 1px 5px black}
 .page {width: 100vw; height: 100vh; position: relative; 
-    background: linear-gradient(180deg, rgba(12,29,64,1) 33%, rgba(20,46,108,1) 66%, rgba(12,29,64,1) 100%);}
+    background: linear-gradient(180deg, rgba(12,29,64,1) 33%, rgba(20,46,108,1) 66%, rgba(12,29,64,1) 100%)}
+.small_page {width: 100vw; height: 70vh; position: relative; 
+    background: linear-gradient(180deg, rgba(12,29,64,1) 33%, rgba(20,46,108,1) 66%, rgba(12,29,64,1) 100%)}
 * {text-wrap: wrap; flex-wrap: wrap}
 
 /* Intro Pages */
 #title_page * {text-shadow:1px 1px 10px black; font-weight: bold}
 #logo {display: block; margin-left: auto; margin-right: auto; padding-top: 20vh; width: 55%; height: auto}
-#title_names {display: block; position: relative; margin-left: 15vw; font-size: 1.5em;}
+#title_names {display: block; position: relative; margin-left: 15vw; font-size: 1.75em;}
 #name_flex {display: flex; justify-content: space-between; padding-top: 10vh; font-weight: bold}
-#SUPERxAD {display: inline; margin: 0; margin-right: 15vw; padding-top: 1.5em; border: 1px,rgb(84, 124, 211); border-radius: 25px; font-size: 1.5em}
+#SUPERxAD {display: inline; margin: 0; margin-right: 15vw; padding-top: 1.5em; border: 1px,rgb(84, 124, 211); border-radius: 25px; font-size: 1.75em}
 
 #feedback * {text-align: center}
-#feedback {height: 75vh}
 a:visited {color:rgb(243, 177, 34); text-decoration: none; font-weight:bold}
 a:hover {color: white; text-decoration: none; font-weight: bold}
 a {color: rgb(228, 123, 4); text-decoration: none; font-weight: bold}
@@ -21,31 +22,39 @@ a {color: rgb(228, 123, 4); text-decoration: none; font-weight: bold}
 #VeryPog2 {position: absolute; left: 77vw; top: 20vh; height: 20vh; width: auto;}
 
 #years {display: flex; justify-content: space-evenly; flex-wrap: wrap; font-size: 2em; margin-top: 5vh; text-shadow:1px 1px 5px black; font-weight: bold}
-#previous_years {height: 50vh}
 
 /* Award Pages */
-.page_title {text-align: center; font-weight: bold; font-size: 3em; padding-top: 10vh; text-shadow:2px 2px 15px black;}
+.page_title {text-align: center; font-weight: bold; font-size: 2.75em; padding-top: 10vh; text-shadow:2px 2px 15px black;}
+.award {position: relative; overflow: hidden; height: auto; padding-bottom: 150px}
 
 .nominee_title {color: white; text-align: center; text-shadow:1px 1px 5px black; font-weight: bold}
 .nominee_long_list {white-space:pre; text-align: center; margin-top: 2vh; text-shadow:1px 1px 5px black}
-.nominee_list {display: flex; min-width: 0; flex-direction: row; flex-wrap: wrap; justify-content: space-around; align-items: center; gap: 16px; max-width: 1400px; padding: 10px 5px; margin: 0 auto}
+.nominee_list {display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around; align-items: center; gap: 16px; max-width: 1500px; padding: 10px 0 10px 0; margin: 0 auto}
+.nominee {display: block}
+.debate_description {font-size: 0.6em}
 
+/* Nominee Names and Numbers for Post-Voting */
 .nominee.unblur img{filter: none}
 .nominee p {text-align: center; transition: filter 0.5s ease}
 .nominee.unblur .name {filter: none;}
 .nominee p .number {filter: none !important; font-weight: bold; color: white; z-index: 1}
 
-.market {position: absolute; bottom: 3vh; left: 3vw; font-size: 1.75em; text-shadow:1px 1px 10px black;}
-#brainlet .market, #emote .market, #employee .market, #buddy .market, #drama .market {bottom: 0vh}
+/* Manifold Market Links */
+.market {position: absolute; bottom: -5px; left: 3vw; font-size: 1.75em; text-shadow:1px 1px 10px black;}
 
-#antagonist img, #frenemy img {width: 20vw; height: 30vh}
-#buddy img, #ally img, #drama img {width: 10vw; height: 25vh}
-#drama .nominee {text-wrap: wrap; max-width: 200px; font-size: 0.9em}
+/* Award Nominees */
+/* Pre-set for 5 nominees */
+#antagonist img, #frenemy img {width: 19vw; height: 29vh}
+/*Pre-set for 12 nominees */
+#buddy img, #ally img, #drama img {width: 11vw; height: 22vh; margin: 0 auto;}
+/* Special pre-set for Drama (Long lines of text) */
+#drama .nominee {max-width: 200px; font-size: 0.8em}
 #drama .nominee_list {overflow: visible}
+/* Shows entire emote in box */
 #emote img {object-fit: contain}
-#frenemy, #antagonist {height: 120vh; overflow: visible}
-.nominee * {flex-wrap: wrap}
+#phrase .nominee_list {padding-right: 15px}
 
+/* Clip Category Emotes */
 .emote_title {display: flex; justify-content: center}
 .category_emote {position: relative; padding-right: 3vh; height: 5em; width: auto; padding-top: 9vh}
 
@@ -53,48 +62,28 @@ a {color: rgb(228, 123, 4); text-decoration: none; font-weight: bold}
 Add filter: blur(50px) to .nominee name and .nominee img
 Change cursor: auto to cursor: pointer */ 
 .nominee .name {overflow: visible;}
-.nominee img {width: 13vw; height: 25vh; object-fit: cover; border-radius: 10px; box-shadow: 5px 5px 10px rgba(0,0,0,0.8); border: 2px solid black; transition: filter 0.5s ease; overflow: hidden;}
+/* Standard pre-set for 10 nominees */
+.nominee img {min-width: 150px; width: 13vw; height: 25vh; object-fit: cover; border-radius: 10px; box-shadow: 5px 5px 10px rgba(0,0,0,0.8); border: 2px solid black; transition: filter 0.5s ease; overflow: hidden; margin: 0 auto}
 .nominee img:hover, .nominee .name:hover {cursor: auto}
 
-@media (max-width: 768px) {
-    .page {height: 200vh}
-    .img_award {height: 1250px}
-    .list_award {height: 1000px}
-    .nominee img {width: 100px !important; height: 150px !important}
-    #frenemy {height: 1000px}
-    #drama {height: 1500px}
-    .nominee_list {padding-right: 30px}
-    .market {position: relative; padding-left: 200vh}
-    #VeryPog, #VeryPog2 {position: relative; padding-left: 200vh}
-    p, .nominee_long_list {font-size: 1em !important; padding-right: 20px}
+@media (max-width: 768px) 
+    {p, .nominee_long_list {font-size: 1em !important; padding-right: 25px}
     h1 {font-size: 1.5em !important}
-    .nominee .name {font-size: 0.75em; text-align: center}
-    * {text-wrap: wrap}
-    #feedback {height: 100vh}
-    #title_page, .list_award {height: 120vh}
+    .nominee .name {font-size: 0.75em}
     .page_title {margin-left: 30px; margin-right: 30px}
-    
+
     #logo {width: 90vw; height: auto}
-    #title_names {padding-right: 5vh}
-    #SUPERxAD {padding-left: 5vh}
-    
-    #previous_years {display: block; height: 80vh}
+    #title_names {padding-right: 5vh}}
 
-    .clip {height: 100vh}}
-
-    @media (max-width: 1250px)
-    {.img_award {height: 1250px}
-    .list_award {height: 1000px}
-    #drama {height: 1500px}
-    #VeryPog, #VeryPog2 {position: relative; margin-left: 200vw}
-    .market {position: relative; margin-left: 200vw}
+@media (max-width: 1300px)
+    {#VeryPog, #VeryPog2 {height: 1px; width: auto}
     .page_title {margin-left: 30px; margin-right: 30px}
-    .nominee_list {padding-right: 30px}}
-    
+    .nominee p {padding-right: 0 !important}
+    .nominee_list {padding-right: 30px; padding-left: 20px}
+    .nominee_long_list {padding-right: 25px}
+    #name_flex * {display: block}
+    .market {font-size: 1.5em; margin-left: 10px}
+    #SUPERxAD {margin-left: 15vw; font-size: 1.5em !important;}}
 
-    @media (max-height: 865px) and (min-width: 800px)
-    {.img_award {height: 1250px !important}
-    .list_award {height: 1000px}
-    #drama {height: 1500px}
-    .page_title {margin-left: 30px; margin-right: 30px}
-    .nominee_list {padding-right: 30px}}
+@media (max-height: 600px) {
+    .page, .small_page {position: relative; overflow: hidden; height: auto; padding-bottom: 125px}}
