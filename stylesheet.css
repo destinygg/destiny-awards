@@ -1,7 +1,7 @@
-html {border: 0; padding: 0; margin: 0; color: rgb(156, 183, 241); background-color: #111113; box-sizing: border-box; overflow-x: hidden; font-family: Verdana}
+html {border: 0; padding: 0; margin: 0; color: rgb(156, 183, 241); background-color: #111113; box-sizing: border-box; overflow: hidden; font-family: Verdana; margin-top: 0px !important}
 body, h1 {margin: 0}
 p {text-shadow:1px 1px 5px black}
-.page {width: 100vw; height: 100vh; position: relative; 
+.page {width: 100vw; height: 100vh; position: relative; margin-top: 0px !important; 
     background: linear-gradient(180deg, rgba(12,29,64,1) 33%, rgba(20,46,108,1) 66%, rgba(12,29,64,1) 100%)}
 .small_page {width: 100vw; height: 70vh; position: relative; 
     background: linear-gradient(180deg, rgba(12,29,64,1) 33%, rgba(20,46,108,1) 66%, rgba(12,29,64,1) 100%)}
