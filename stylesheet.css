@@ -101,12 +101,6 @@ a {color: rgb(228, 123, 4); text-decoration: none; font-weight: bold}
     padding-top: 9vh
 }
 
-.background {
-    color: black;
-}
-.background:hover {
-    background-color: none;
-}
 /* How to swap from Pre-Voting to Final status:
 Set filter: blur(50px) to .nominee name and .nominee img
 Change cursor: auto to cursor: pointer */ 
