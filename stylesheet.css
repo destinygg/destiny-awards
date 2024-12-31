@@ -1,7 +1,7 @@
-html {border: 0; padding: 0; margin: 0; color: rgb(156, 183, 241); background-color: #111113; box-sizing: border-box; overflow: hidden; font-family: Verdana; margin-top: 0px !important}
+html {border: 0; padding: 0; margin: 0; color: rgb(156, 183, 241); background-color: #111113; box-sizing: border-box; overflow-x: hidden; font-family: Verdana}
 body, h1 {margin: 0}
 p {text-shadow:1px 1px 5px black}
-.page {width: 100vw; height: 100vh; position: relative; margin-top: 0px !important; 
+.page {width: 100vw; height: auto; position: relative; 
     background: linear-gradient(180deg, rgba(12,29,64,1) 33%, rgba(20,46,108,1) 66%, rgba(12,29,64,1) 100%)}
 .small_page {width: 100vw; height: 70vh; position: relative; 
     background: linear-gradient(180deg, rgba(12,29,64,1) 33%, rgba(20,46,108,1) 66%, rgba(12,29,64,1) 100%)}
@@ -25,9 +25,21 @@ a {color: rgb(228, 123, 4); text-decoration: none; font-weight: bold}
 .award {position: relative; overflow: hidden; height: auto; padding-bottom: 125px}
 
 .nominee_title {color: white; text-align: center; text-shadow:1px 1px 5px black; font-weight: bold}
-.nominee_list {display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around; align-items: center; gap: 16px; max-width: 90vw; padding: 10px 0 10px 0; margin: 0 auto}
+.nominee_list {display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around; align-items: center; gap: 16px; max-width: 90vw; padding: 10px 0 10px 0; margin: 0 auto; padding-top: 100px !important}
 .nominee {display: block; min-width: 150px}
 .debate_description {font-size: 0.6em}
+
+.announcer {
+    border-radius: 10px;
+    width: 750px;
+    max-width: 80vw;
+    height: 421.875px;
+    max-height: 45vw;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 50px;
+}
 
 /* Nominee Names and Numbers for Post-Voting */
 .nominee.unblur img{filter: none}
@@ -47,7 +59,7 @@ a {color: rgb(228, 123, 4); text-decoration: none; font-weight: bold}
     max-width: 70vw;
 }
 /* Pre-set for 12 nominees */
-#buddy img, #ally img, #drama img, #employee img {
+#buddy img, #ally img, #drama img {
     width: 11vw;
     height: 22vh;
     display: block;
@@ -63,16 +75,13 @@ a {color: rgb(228, 123, 4); text-decoration: none; font-weight: bold}
     height: 275px;
 }
 /* Special Pre-set for Drama and Meme Phrase*/
-#drama .nominee, #employee .nominee {
+#drama .nominee {
     max-width: 200px;
     font-size: 0.8em;
     height: 320px;
 }
 #drama .nominee_list, #phrase .nominee_list {
     column-gap: 32px;
-}
-#employee .nominee_list {
-    row-gap: 32px;
 }
 /* Shows entire emote in box */
 #emote img, #debate img {
@@ -92,12 +101,18 @@ a {color: rgb(228, 123, 4); text-decoration: none; font-weight: bold}
     padding-top: 9vh
 }
 
+.background {
+    color: black;
+}
+.background:hover {
+    background-color: none;
+}
 /* How to swap from Pre-Voting to Final status:
 Set filter: blur(50px) to .nominee name and .nominee img
 Change cursor: auto to cursor: pointer */ 
 .nominee .name {
     overflow: hidden;
-    filter: blur(0px);
+    filter: blur(50px);
     transition: filter 0.5s ease; 
 }
 /* Standard pre-set for 10 nominees */
@@ -112,10 +127,10 @@ Change cursor: auto to cursor: pointer */
     overflow: hidden; 
     margin: 0 auto;
     transition: filter 0.5s ease;
-    filter: blur(0px);
+    filter: blur(50px);
 }
 .nominee img:hover, .nominee .name:hover {
-    cursor: auto;
+    cursor: pointer;
 }
 iframe {
     object-fit: contain;
